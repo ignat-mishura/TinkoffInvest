@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+
+    <property name="connection.url">jdbc:postgresql://localhost/tinkoff_db</property> <!-- BD Mane -->
+    <property name="connection.driver_class">org.postgresql.Driver</property> <!-- DB Driver -->
+    <property name="connection.username">postgres</property> <!-- DB User -->
+    <property name="connection.password">postgres</property> <!-- DB Password -->
+
+    <property name="hbm2ddl.auto">update</property> <!-- create / create-drop / update -->
+    <property name="hibernate.current_session_context_class">thread</property>
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    <mapping class="ru.mishura.tinkoff.entity.Candle"/>
+  </session-factory>
+</hibernate-configuration>
